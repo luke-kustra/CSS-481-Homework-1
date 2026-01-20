@@ -1,55 +1,60 @@
-<html lang ="en">
-<style>
-    .box {
-        border: 2px solid purple;
-        width: 500px;
-        height: 1000px;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-        left: 0;
-        top: 0;
-        background-color: purple;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    .box-right {
-        border: 2px solid purple;
-        width: 500px;
-        height: 1000px;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        background-color: purple;
-    }
+<head>
+    <title>Software Engineering Intern at DashBeast</title>
+    <style>
+        .box {
+            border: 2px solid purple;
+            width: 500px;
+            height: 1000px;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: purple;
+        }
 
-    .heading {
-        justify-self: center;
-    }
+        .box-right {
+            border: 2px solid purple;
+            width: 500px;
+            height: 1000px;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: purple;
+        }
 
-    .spacing {
-        margin-top: 50px;
-    }
+        .heading {
+            justify-self: center;
+        }
 
-    .extra-space {
-        margin-top: 50px;
-        display: inline-block;
-    }
+        .spacing {
+            margin-top: 50px;
+        }
 
-    .pic-center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
+        .extra-space {
+            margin-top: 50px;
+            display: inline-block;
+        }
+
+        .pic-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
 
 <body class="heading">
     <div class="box"></div>
     <div class="box-right"></div>
 
     <h1 class="title">Software Engineering Intern at DashBeast</h1>
-    <img class="pic-center" src="Screenshot 2026-01-19 235052.png" width="500" height="150" alt="DashBeast Logo">
+    <img class="pic-center" src="Screenshot%202026-01-19%20235052.png" width="500" height="150" alt="DashBeast Logo">
     <p>My role at Dashbeast Inc. was to create a Machine Learning Model that accepts</p>
     <p>acceleration, gyroscopic, and magnetometer data in the X, Y, and Z directions.</p>
     <p>Using that data the model will predict what exercise the user is performing,</p>
@@ -57,13 +62,15 @@
 
     <img class="pic-center spacing" src="code_snippet.png" width="600" height="400" alt="DashBeast Model Architecture">
 
-    <p class="spacing"> This model utilized a <a href= https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network/> One-Dimensional Convolutional Neural Network Model.</a></p>
+    <p class="spacing"> This model utilized a <a
+            href=https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network />
+        One-Dimensional Convolutional Neural Network Model.</a></p>
     <p>The training of which involves the stacking of four Conv1D blocks with BatchNorm,</p>
     <p>ReLU, and max-pooling to learn temporal patterns and downsample the sequence, </p>
     <p>then flattening to two fully connected layers with dropout before a final linear</p>
     <p>layer that outputs logits for each exercise class (trained with cross-entropy loss).</p>
 
-    <img class="pic-center spacing" src="json snippet.png" width="600" height="200" alt="DashBeast JSON Output">
+    <img class="pic-center spacing" src="json%20snippet.png" width="600" height="200" alt="DashBeast JSON Output">
 
     <p class="spacing"> The model then outputs a .json file with what workout the model</p>
     <p>predicts the user is performing alongside a confidence score for that prediction.</p>
