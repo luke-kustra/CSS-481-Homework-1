@@ -2,89 +2,136 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineering Intern at DashBeast - Machine Learning Project Portfolio">
+    <meta name="author" content="Luke Kustra">
+    <link rel="stylesheet" href="styles.css">
     <title>Software Engineering Intern at DashBeast</title>
-    <style>
-        .box {
-            border: 2px solid purple;
-            width: 500px;
-            height: 1000px;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background-color: purple;
-        }
-
-        .box-right {
-            border: 2px solid purple;
-            width: 500px;
-            height: 1000px;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            right: 0;
-            top: 0;
-            background-color: purple;
-        }
-
-        .heading {
-            justify-self: center;
-        }
-
-        .spacing {
-            margin-top: 50px;
-        }
-
-        .extra-space {
-            margin-top: 50px;
-            display: inline-block;
-        }
-
-        .pic-center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 </head>
 
 <body class="heading">
     <div class="box"></div>
     <div class="box-right"></div>
 
-    <h1 class="title">Software Engineering Intern at DashBeast</h1>
-    <img class="pic-center" src="Screenshot%202026-01-19%20235052.png" width="500" height="150" alt="DashBeast Logo">
-    <p>My role at Dashbeast Inc. was to create a Machine Learning Model that accepts</p>
-    <p>acceleration, gyroscopic, and magnetometer data in the X, Y, and Z directions.</p>
-    <p>Using that data the model will predict what exercise the user is performing,</p>
-    <p>such as a bench press, a squat, or a pushup. This model utilized a One-Dimensional</p>
+    <header>
+        <h1 class="title">Software Engineering Intern at DashBeast</h1>
+        <figure>
+            <img class="pic-center" src="Screenshot%202026-01-19%20235052.png" width="500" height="150"
+                alt="DashBeast Logo">
+            <figcaption><em>DashBeast Inc. - Fitness Technology Company</em></figcaption>
+        </figure>
+    </header>
 
-    <img class="pic-center spacing" src="code_snippet.png" width="600" height="400" alt="DashBeast Model Architecture">
+    <nav>
+        <ul>
+            <li><a href="#overview">Project Overview</a></li>
+            <li><a href="#architecture">Model Architecture</a></li>
+            <li><a href="#output">Output Format</a></li>
+            <li><a href="#learnings">Key Learnings</a></li>
+        </ul>
+    </nav>
 
-    <p class="spacing"> This model utilized a <a
-            href=https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network>
-        One-Dimensional Convolutional Neural Network Model.</a></p>
-    <p>The training of which involves the stacking of four Conv1D blocks with BatchNorm,</p>
-    <p>ReLU, and max-pooling to learn temporal patterns and downsample the sequence, </p>
-    <p>then flattening to two fully connected layers with dropout before a final linear</p>
-    <p>layer that outputs logits for each exercise class (trained with cross-entropy loss).</p>
+    <main>
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <article>
+                <p>My role at Dashbeast Inc. was to create a Machine Learning Model that accepts</p>
+                <p>acceleration, gyroscopic, and magnetometer data in the X, Y, and Z directions.</p>
+                <p>Using that data the model will predict what exercise the user is performing,</p>
+                <p>such as a bench press, a squat, or a pushup. This model utilized a One-Dimensional</p>
+                <p>Convolutional Neural Network for temporal pattern recognition and classification.</p>
+            </article>
+        </section>
 
-    <img class="pic-center spacing" src="json%20snippet.png" width="600" height="200" alt="DashBeast JSON Output">
+        <section id="architecture">
+            <h2>Model Architecture</h2>
+            <figure>
+                <img class="pic-center spacing" src="code_snippet.png" width="600" height="400"
+                    alt="DashBeast Model Architecture">
+                <figcaption><strong>Figure 1:</strong> One-Dimensional CNN Architecture with Conv1D Blocks</figcaption>
+            </figure>
 
-    <p class="spacing"> The model then outputs a .json file with what workout the model</p>
-    <p>predicts the user is performing alongside a confidence score for that prediction.</p>
-    <p>The .json file makes the ML feature module for other systems to interact with the </p>
-    <p>model easily. Overall, this project was a great experience in learning how to</p>
-    <p>build and deploy machine learning models for real world applications! I learned</p>
-    <p>more about data preprocessing, model architecture design using Pytorch, and model</p>
-    <p>evaluation through this internship that I could definitely recreate for personal or</p>
-    <p>professional projects.</p>
+            <article class="spacing">
+                <h3>Technical Implementation</h3>
+                <p>This model utilized a <a
+                        href="https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network">
+                        One-Dimensional Convolutional Neural Network Model.</a></p>
+                <details>
+                    <summary>Training Process Details</summary>
+                    <p>The training of which involves the stacking of four Conv1D blocks with BatchNorm,
+                        ReLU, and max-pooling to learn temporal patterns and downsample the sequence.</p>
+                    <p>Then flattening to two fully connected layers with dropout before a final linear
+                        layer that outputs logits for each exercise class (trained with cross-entropy loss).</p>
+                </details>
+            </article>
+        </section>
 
-    <p><a class="extra-space" href="https://dashbeast.com/">Visit DashBeast's Website</a> for more information about the
-        company and its mission</p>
+        <section id="output">
+            <h2>Model Output & Integration</h2>
+            <figure>
+                <img class="pic-center spacing" src="json%20snippet.png" width="600" height="200"
+                    alt="DashBeast JSON Output">
+                <figcaption><strong>Figure 2:</strong> JSON Output Format with Predictions and Confidence Scores
+                </figcaption>
+            </figure>
 
-    <a class="extra-space" href="index.html">Explore my other experiences!</a>
+            <article class="spacing">
+                <h3>Output Specification</h3>
+                <p>The model outputs a <code>.json</code> file with the predicted workout alongside a confidence score.
+                </p>
+                <blockquote>
+                    <p>"The .json file makes the ML feature module for other systems to interact with the
+                        model easily, enabling seamless integration across multiple platforms and applications."</p>
+                </blockquote>
+            </article>
+        </section>
+
+        <section id="learnings">
+            <h2>Key Learnings & Experience</h2>
+            <article>
+                <p>Overall, this project was a great experience in learning how to build and deploy machine learning
+                    models for real world applications! I learned more about:</p>
+                <ul>
+                    <li>Data preprocessing and feature engineering</li>
+                    <li>Model architecture design using PyTorch</li>
+                    <li>Model evaluation and performance optimization</li>
+                    <li>Deployment considerations for production systems</li>
+                </ul>
+                <p>I could definitely recreate for personal or professional projects the skills gained during this
+                    internship,
+                    particularly in sensor data processing and deep learning implementation.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <h3>Learn More</h3>
+        <p><a href="https://dashbeast.com/">Visit DashBeast's Website</a> for more information about the
+            company and its mission to revolutionize fitness technology.</p>
+
+        <address>
+            <p>For inquiries about this project or DashBeast, contact the company at <a
+                    href="https://dashbeast.com/">dashbeast.com</a></p>
+        </address>
+
+        <p><a class="extra-space" href="index.html">← Explore my other experiences!</a></p>
+    </footer>
+
+    <aside>
+        <h4>Quick Stats</h4>
+        <dl>
+            <dt>Model Type:</dt>
+            <dd>1D Convolutional Neural Network</dd>
+            <dt>Input Features:</dt>
+            <dd>Accelerometer, Gyroscope, Magnetometer (X, Y, Z)</dd>
+            <dt>Output Format:</dt>
+            <dd>JSON with predictions and confidence scores</dd>
+            <dt>Framework:</dt>
+            <dd>PyTorch</dd>
+        </dl>
+    </aside>
 
 </body>
 

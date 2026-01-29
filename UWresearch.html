@@ -2,74 +2,134 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Undergraduate Researcher at University of Washington - Autonomous Vehicle Navigation">
+    <meta name="author" content="Luke Kustra">
+    <link rel="stylesheet" href="styles.css">
     <title>Undergraduate Researcher at University of Washington</title>
-    <style>
-        .heading {
-            justify-self: center;
-            text-align: center;
-        }
-
-        .spacing {
-            margin-top: 50px;
-        }
-
-        .box {
-            border: 2px solid purple;
-            width: 500px;
-            height: 1000px;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background-color: purple;
-        }
-
-        .box-right {
-            border: 2px solid purple;
-            width: 500px;
-            height: 1000px;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            right: 0;
-            top: 0;
-            background-color: purple;
-        }
-
-        .pic-center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 </head>
 
 <body class="heading">
     <div class="box"></div>
     <div class="box-right"></div>
-    <h1 class="title">Undergraduate Researcher at University of Washington</h1>
-    <img class="pic-center spacing" src="uwLogo.png" width="250" height="150" alt="University of Washington Logo">
-    <p class="spacing">I worked on a multidisciplinary University of Washington research</p>
-    <p>team developing autonomous navigation software for a driverless all terrain</p>
-    <p>vehicle. My role focused on designing and implementing machine learning driven</p>
-    <p>perception and decision making systems that enabled the vehicle to detect</p>
-    <p>obstacles and navigate toward target locations in simulated environments.</p>
-    <p>I implemented object detection algorithms using LiDAR sensor data, allowing the</p>
-    <p>system to recognize obstacles and perform actions such as stopping, turning, and</p>
-    <p>route correction. While the physical vehicle was not tested directly, key aspects</p>
-    <p>of the vehicle and software stack were modeled and validated using ROS, enabling</p>
-    <p>realistic simulation of sensor inputs, vehicle behavior, and control logic.</p>
-    <p>To support model development and evaluation, I used PyTorch and datasets such as</p>
-    <p>KITTI to train and assess perception models under realistic conditions. Development</p>
-    <p>was primarily done in C++ and Python within a Linux virtual machine environment,</p>
-    <p>with close collaboration across disciplines to ensure proper integration between</p>
-    <p>perception, planning, and control components.</p>
 
-    <img class="pic-center spacing" src="ros2%20pic.jpg" width="600" height="400"
-        alt="UW Autonomous Vehicle Simulation">
+    <header>
+        <h1 class="title">Undergraduate Researcher at University of Washington</h1>
+        <figure>
+            <img class="pic-center spacing" src="uwLogo.png" width="250" height="150"
+                alt="University of Washington Logo">
+            <figcaption><em>Paul G. Allen School of Computer Science & Engineering</em></figcaption>
+        </figure>
+    </header>
 
-    <a class="extra-space" href="index.html">Explore my other experiences!</a>
+    <nav>
+        <ul>
+            <li><a href="#overview">Project Overview</a></li>
+            <li><a href="#role">My Role</a></li>
+            <li><a href="#implementation">Implementation</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <article>
+                <p>I worked on a <strong>multidisciplinary University of Washington research team</strong> developing
+                </p>
+                <p>autonomous navigation software for a <em>driverless all terrain vehicle</em>. The project focused</p>
+                <p>on creating intelligent systems capable of operating in diverse environments with minimal human
+                    intervention.</p>
+            </article>
+        </section>
+
+        <section id="role">
+            <h2>My Role & Responsibilities</h2>
+            <article>
+                <p>My role focused on <strong>designing and implementing machine learning driven</strong></p>
+                <p>perception and decision making systems that enabled the vehicle to detect</p>
+                <p>obstacles and navigate toward target locations in simulated environments.</p>
+
+                <h3>Key Accomplishments</h3>
+                <ul>
+                    <li>Implemented object detection algorithms using LiDAR sensor data</li>
+                    <li>Enabled obstacle recognition and reactive behaviors (stopping, turning, route correction)</li>
+                    <li>Validated systems using ROS simulation with realistic sensor inputs</li>
+                    <li>Collaborated across multiple engineering disciplines</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="implementation">
+            <h2>Implementation & Validation</h2>
+            <figure>
+                <img class="pic-center spacing" src="ros2%20pic.jpg" width="600" height="400"
+                    alt="UW Autonomous Vehicle Simulation">
+                <figcaption><strong>Figure 1:</strong> ROS 2 Simulation Environment for Autonomous Navigation Testing
+                </figcaption>
+            </figure>
+
+            <article class="spacing">
+                <p>While the physical vehicle was not tested directly, <strong>key aspects of the vehicle and
+                        software</strong></p>
+                <p>stack were modeled and validated using <code>ROS</code> (Robot Operating System), enabling</p>
+                <p>realistic simulation of sensor inputs, vehicle behavior, and control logic.</p>
+            </article>
+        </section>
+
+        <section id="technologies">
+            <h2>Technologies & Tools</h2>
+            <article>
+                <p>To support model development and evaluation, I used cutting-edge tools and frameworks:</p>
+
+                <h3>Machine Learning Stack</h3>
+                <ul>
+                    <li><strong>PyTorch:</strong> Deep learning framework for perception models</li>
+                    <li><strong>KITTI Dataset:</strong> Large-scale autonomous driving benchmark</li>
+                    <li>LiDAR-based perception and 3D object detection</li>
+                </ul>
+
+                <h3>Development Environment</h3>
+                <ul>
+                    <li><strong>Languages:</strong> C++ and Python</li>
+                    <li><strong>Middleware:</strong> ROS (Robot Operating System)</li>
+                    <li><strong>Platform:</strong> Linux virtual machine environment</li>
+                </ul>
+
+                <h3>Collaboration</h3>
+                <p>Close collaboration across <strong>interdisciplinary teams</strong> ensured proper integration
+                    between</p>
+                <p>perception, planning, and control components of the autonomous system.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><a class="spacing" href="index.html">← Explore my other experiences!</a></p>
+        <address>
+            <p><small>Project conducted at University of Washington, Seattle, WA</small></p>
+        </address>
+    </footer>
+
+    <aside>
+        <h3>Quick Stats</h3>
+        <dl>
+            <dt>Institution:</dt>
+            <dd>University of Washington</dd>
+            <dt>Project Type:</dt>
+            <dd>Autonomous Vehicle Navigation</dd>
+            <dt>Primary Focus:</dt>
+            <dd>Machine Learning Perception Systems</dd>
+            <dt>Development Language:</dt>
+            <dd>C++ and Python</dd>
+            <dt>Simulation Platform:</dt>
+            <dd>ROS 2</dd>
+        </dl>
+    </aside>
+
 </body>
 
 </html>
